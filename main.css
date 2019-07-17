@@ -122,6 +122,7 @@ body {
     color: #fff;
     transition: flex .4s ease;
     position: relative;
+    cursor: pointer;
 }
 
 .section .overlay {
