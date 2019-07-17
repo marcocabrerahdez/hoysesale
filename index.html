@@ -45,7 +45,8 @@
         </div>
 
         <div class="partyChoiceContainer">
-            <div id="marinha" class="section">
+          <div class="averageContainer" style="display: none"></div>
+            <div id="marinha" class="section" onclick="addMarinhaVote()">
                 <div class="content">
                     <h1>Marinha</h1>
                 </div>
@@ -53,18 +54,15 @@
                 <div class="overlay"></div>
             </div>
 
-            <div id="papagayo" class="section">
+            <div id="papagayo" class="section" onclick="addPapagayoVote()">
                 <div class="content">
                     <h1>Papagayo</h1>
-                    <button onclick="addMessage()">
-                      Add me!
-                    </button>
                 </div>
 
                 <div class="overlay"></div>
             </div>
 
-            <div id="terrazas" class="section">
+            <div id="terrazas" class="section" onclick="addTerrazasVote()">
                 <div class="content">
                     <h1>Terrazas</h1>
                 </div>
