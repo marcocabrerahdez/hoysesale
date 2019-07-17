@@ -17,9 +17,9 @@ body {
 .website {
     display: flex;
     width: 100%;
-    height: 150px;
+    height: 125px;
     background:white; 
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .websiteContainer {
@@ -81,6 +81,7 @@ body {
 
 .resumeContainer {
     background-color: #a9855d;
+    opacity: 0.8;
     justify-content: center;
     width: 100%;
     height: 304px;
