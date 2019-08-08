@@ -18,6 +18,7 @@ var allVotes = [];
 var papagayoCount = 0;
 var marinhaCount = 0;
 var terrazasCount = 0;
+var totalCount;
 
 database.ref(chatChannel).on("child_added", snapshot => {
   var data = snapshot.val();
@@ -37,6 +38,9 @@ function calculateAverage() {
     }
   });
 
+  totalCount = papagayoCount + marinhaCount + terrazasCount;
+  console.log("totalCount", totalCount);
+
   console.log("papagayo:", papagayoCount);
   console.log("marinha:", marinhaCount);
   console.log("terrazas:", terrazasCount);
@@ -48,44 +52,33 @@ function showAverage() {
   // lo mostramos
   averageContainer.style.display = "block";
   // lo rellenamos con HTML!!!
-  averageContainer.innerHTML = `<div class="percentageCircles">
-  <div class="svg-item">
-  <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
-    <circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#fff"></circle>
-    <circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5"></circle>
-    <circle class="donut-segment" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5" stroke-dasharray="20 80" stroke-dashoffset="25"></circle>
-    <g class="donut-text">
+  averageContainer.innerHTML = `<div class="resultsContainer">
+  <div class="resultsContent">
+      <div class="results">
+          <p>
+              <span>Resultados de la Votación</span>
+          </p>
+      </div>
+  </div>
+</div>
 
-      <text y="50%" transform="translate(0, 2)">
-        <tspan x="50%" text-anchor="middle" class="donut-percent">${papagayoCount}</tspan>   
-      </text>
-    </g>
-  </svg>
-</div> <div class="svg-item">
-<svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
-  <circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#fff"></circle>
-  <circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5"></circle>
-  <circle class="donut-segment" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5" stroke-dasharray="20 80" stroke-dashoffset="25"></circle>
-  <g class="donut-text">
-
-    <text y="50%" transform="translate(0, 2)">
-      <tspan x="50%" text-anchor="middle" class="donut-percent">${marinhaCount}</tspan>   
-    </text>
-  </g>
-</svg>
-</div> <div class="svg-item">
-<svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
-  <circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#fff"></circle>
-  <circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5"></circle>
-  <circle class="donut-segment" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5" stroke-dasharray="20 80" stroke-dashoffset="25"></circle>
-  <g class="donut-text">
-
-    <text y="50%" transform="translate(0, 2)">
-      <tspan x="50%" text-anchor="middle" class="donut-percent">${terrazasCount}</tspan>   
-    </text>
-  </g>
-</svg>
-</div></div>
+<div class="percentageCircles">
+  <div class="graph-container">
+    <svg id="my-svg-papagayo" width="250px" height="250px">
+    </svg>
+    <span class="percent-text">${(papagayoCount/totalCount)*100} %</span>
+  </div>
+  <div class="graph-container">
+    <svg id="my-svg-marinha" width="250px" height="250px">
+    </svg>
+    <span class="percent-text">${(marinhaCount/totalCount)*100} %</span>
+  </div>
+  <div class="graph-container">
+  <svg id="my-svg-terrazas" width="250px" height="250px">
+    </svg>
+    <span class="percent-text">${(terrazasCount/totalCount)*100} %</span>
+  </div>
+</div>
 <div class=percentageTitle>
     <div class="myTitle">
         <p>
@@ -103,6 +96,48 @@ function showAverage() {
         </p>
     </div>
 </div>`;
+}
+
+function updateGraph(perc, circle, perimeter, color) {
+  // Reset attributes
+  circle.attr({
+    fill: 'none',
+    stroke: color,
+    strokeWidth: '0.5cm',
+    strokeDasharray: '0 ' + perimeter,
+    strokeDashoffset: perimeter * .25
+  });
+  
+  // Animate
+  Snap.animate(0, perc, (val) => {
+    circle.attr({
+      strokeDasharray: perimeter * val + ' ' + perimeter * (1 - val)
+    });
+  }, 1500, mina.easeinout)
+}
+
+function getSnap(element, count, total) {
+  var snap = Snap(element);
+  var w = element.width.baseVal.value, h = element.height.baseVal.value, cx = w/2, cy = h/2;
+
+  var radius = 100;
+  var perimeter = 2 * Math.PI * radius;
+  var percent = (count/total);
+  var color = '#a9855d';
+
+  var circle = snap.circle(cx, cy, radius);
+
+  updateGraph(percent, circle, perimeter, color);
+}
+
+function renderGraphs() {
+    var mySvgPapagayo = document.querySelector('#my-svg-papagayo');
+    var mySvgMarinha = document.querySelector('#my-svg-marinha');
+    var mySvgTerrazas = document.querySelector('#my-svg-terrazas');
+
+    getSnap(mySvgPapagayo, papagayoCount, totalCount);
+    getSnap(mySvgMarinha, marinhaCount, totalCount);
+    getSnap(mySvgTerrazas, terrazasCount, totalCount);
 }
 
 function addPapagayoVote() {
@@ -139,4 +174,6 @@ function popUpAndHide() {
   calculateAverage();
   // mostramos votos
   showAverage();
+  renderGraphs();
 }
+

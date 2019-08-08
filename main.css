@@ -31,7 +31,7 @@ body {
 
 .websiteText {
     display: flex;
-    font-family: "Big Calson";
+    font-family: "Bahianita";
     font-size: 5rem;
     align-items: center;
 }
@@ -73,7 +73,7 @@ body {
     justify-content: space-around;
     width: 100%;
     color: white;
-    font-family: "Old Century";
+    font-family: "Bahianita";
     font-weight: 500;
     font-size: 3rem;
 }
@@ -102,7 +102,7 @@ body {
     justify-content: space-around;
     width: 100%;
     color: black;
-    font-family: "Big Calson";
+    font-family: "Bahianita";
     font-size: 2rem;
 }
 
@@ -138,6 +138,8 @@ body {
 
 .section .content {
     z-index: 2;
+    font-family: "Bahianita";
+    font-size: 2rem;
 }
 
 .section:hover {
@@ -251,7 +253,48 @@ footer {
 }
 
 .myTitle {
-    font-family: "Big Calson";
+    font-family: "Bahianita";
     font-size: 15px;
     color: white;
 }
+
+.resultsContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.resultsContent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    font-family: "Bahianita";
+}
+
+.results {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Bahianita";
+    font-size: 2rem;
+    color: white;
+    width: 100%;
+}
+
+.graph-container {
+    position: relative;
+}
+
+.graph-container .percent-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+    font-family: "Bahianita";
+  }
