@@ -1,0 +1,398 @@
+    /* Iphone 6, 7 and 8 */
+@media only screen and (max-width: 700px) and (min-width: 375px) {
+    body{
+        justify-content: space-around;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        flex-direction: column;
+        display: block;
+    }
+
+    .website {
+        display: flex;
+        width: 100%;
+        height: 125px;
+        background:#fff; 
+        opacity: 0.7;
+    }
+    
+    .websiteContainer {
+        display: flex;
+        width: 70%;
+        align-items: center;
+        margin-left: 50px;
+    }
+    
+    .websiteText {
+        display: flex;
+        font-family: "Bahianita";
+        font-size: 3rem;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+    
+    .myLogo {
+        display: flex;
+    }
+
+    .myLogo img {
+        height: 50px;
+    }
+    
+    .headerContainer {
+        justify-content: center;
+        height: 542px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .textContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 125px;
+    }
+    
+    .title {
+        display: flex;
+        position: relative;
+        justify-content: space-around;
+        width: 100%;
+        color: white;
+        font-family: "Bahianita";
+        font-weight: 500;
+        font-size: 2rem;
+    }
+
+    .resumeContainer {
+        background-color: #a9855d;
+        opacity: 0.8;
+        justify-content: center;
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .resume {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+    }
+    
+    .text {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        color: black;
+        font-family: "Bahianita";
+        font-size: 1.7rem;
+        margin-left: 10px;
+    }
+
+    .partyChoiceContainer {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .section {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        transition: flex .4s ease;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .section .overlay {
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: background-color .8s ease;
+    }
+    
+    .section .content {
+        z-index: 2;
+        font-family: "Bahianita";
+        font-size: 0.9rem;
+        margin-left: 10px;
+    }
+    
+    .section:hover {
+        flex: 2;
+    }
+    
+    .section:hover .overlay {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    
+    #marinha {
+        background-image: url(./assets/marinha-beach-club.jpg)
+    }
+    
+    #papagayo {
+        background-image: url(./assets/papagayo-beach-club.jpg)
+    }
+    
+    #terrazas {
+        background-image:url(./assets/terraza-isla-de-mar.jpg)
+    }
+    
+    footer {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        height: 150px;
+        width: 100%;
+        background: #a9855d;
+    }
+    
+    .social {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .copyrightContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .copyrightContent {
+        display: flex;
+        align-items: center;
+    }
+    
+    .copyright {
+        color:#fff;
+        font-size: 0.8rem;
+        font-family: "Big Calson";
+    }
+    
+    @keyframes donut-chart-fill {
+        to { stroke-dasharray: 0 100; }
+    }
+}
+
+    /* Iphone 6 Plus, 7 Plus and 8 Plus */
+
+@media only screen and (max-width: 736px) and (min-width: 414px) { 
+    body{
+        justify-content: space-around;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        flex-direction: column;
+        display: block;
+    }
+
+    .website {
+        display: flex;
+        width: 100%;
+        height: 125px;
+        background:#fff; 
+        opacity: 0.7;
+    }
+
+    .websiteContainer {
+        display: flex;
+        width: 70%;
+        align-items: center;
+        margin-left: 50px;
+    }
+
+    .websiteText {
+        display: flex;
+        font-family: "Bahianita";
+        font-size: 3rem;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .myLogo {
+        display: flex;
+    }
+
+    .myLogo img {
+        height: 50px;
+    }
+
+    .headerContainer {
+        justify-content: center;
+        height: 611px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .textContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 125px;
+    }
+
+    .title {
+        display: flex;
+        position: relative;
+        justify-content: space-around;
+        width: 100%;
+        color: white;
+        font-family: "Bahianita";
+        font-weight: 500;
+        font-size: 2rem;
+    }
+
+    .resumeContainer {
+        background-color: #a9855d;
+        opacity: 0.8;
+        justify-content: center;
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .resume {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5px;
+    }
+
+    .text {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        color: black;
+        font-family: "Bahianita";
+        font-size: 1.7rem;
+        margin-left: 10px;
+    }
+
+    .partyChoiceContainer {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        transition: flex .4s ease;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .section .overlay {
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: background-color .8s ease;
+    }
+
+    .section .content {
+        z-index: 2;
+        font-family: "Bahianita";
+        font-size: 0.9rem;
+        margin-left: 10px;
+    }
+
+    .section:hover {
+        flex: 2;
+    }
+
+    .section:hover .overlay {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #marinha {
+        background-image: url(./assets/marinha-beach-club.jpg)
+    }
+
+    #papagayo {
+        background-image: url(./assets/papagayo-beach-club.jpg)
+    }
+
+    #terrazas {
+        background-image:url(./assets/terraza-isla-de-mar.jpg)
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        height: 150px;
+        width: 100%;
+        background: #a9855d;
+    }
+
+    .social {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .copyrightContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .copyrightContent {
+        display: flex;
+        align-items: center;
+    }
+
+    .copyright {
+        color:#fff;
+        font-size: 0.8rem;
+        font-family: "Big Calson";
+    }
+
+    @keyframes donut-chart-fill {
+        to { stroke-dasharray: 0 100; }
+    }
+}
