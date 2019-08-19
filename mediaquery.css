@@ -191,10 +191,6 @@
         font-size: 0.8rem;
         font-family: "Big Calson";
     }
-    
-    @keyframes donut-chart-fill {
-        to { stroke-dasharray: 0 100; }
-    }
 }
 
     /* Iphone 6 Plus, 7 Plus and 8 Plus */
@@ -390,10 +386,6 @@
         color:#fff;
         font-size: 0.8rem;
         font-family: "Big Calson";
-    }
-
-    @keyframes donut-chart-fill {
-        to { stroke-dasharray: 0 100; }
     }
 
 
