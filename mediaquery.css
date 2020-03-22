@@ -104,7 +104,7 @@
 
     .partyChoiceContainer {
         display: flex;
-        height: 100vh;
+        width: 100%;
         justify-content: center;
         align-items: center;
     }
@@ -123,6 +123,8 @@
         position: relative;
         cursor: pointer;
     }
+
+
     
     .section .overlay {
         background-color: rgba(0, 0, 0, 0.3);
@@ -355,6 +357,75 @@
         background-image:url(./assets/terraza-isla-de-mar.jpg)
     }
 
+
+    .percentageCircles {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .percentageTitle {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .myTitle {
+        font-family: "Bahianita";
+        font-size: 15px;
+        color: white;
+    }
+
+    .averageContainer {
+        width: 100%;
+        height: 700px;
+    }
+
+    .resultsContainer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 150px;
+    }
+
+    .resultsContent {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        font-family: "Bahianita";
+    }
+
+    .results {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: "Bahianita";
+        font-size: 2rem;
+        color: white;
+        width: 100%;
+    }
+
+    .graph-container {
+        position: relative;
+        height: 33%;
+    }
+
+    .graph-container .percent-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 15px;
+        color: white;
+        font-family: "Bahianita";
+    }
+
     footer {
         display: flex;
         justify-content: space-around;
@@ -386,79 +457,5 @@
         color:#fff;
         font-size: 0.8rem;
         font-family: "Big Calson";
-    }
-
-
-    .percentageCircles {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        justify-content: space-around;
-        height: 500px;
-    }
-
-    .svg-item {
-        display: flex;
-        flex-direction: row;
-        width: 200px;
-        height: 200px;
-        font-size: 16px;
-    }
-
-
-    .percentageTitle {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
-    }
-
-    .myTitle {
-        font-family: "Bahianita";
-        font-size: 15px;
-        color: white;
-    }
-
-    .resultsContainer {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .resultsContent {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        flex-direction: column;
-        font-family: "Bahianita";
-    }
-
-    .results {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        font-family: "Bahianita";
-        font-size: 2rem;
-        color: white;
-        width: 100%;
-    }
-
-    .graph-container {
-        position: relative;
-        height: 100%;
-    }
-
-    .graph-container .percent-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 40px;
-        color: white;
-        font-family: "Bahianita";
     }
 }
